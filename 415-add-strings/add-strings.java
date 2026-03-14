@@ -7,20 +7,20 @@ class Solution {
         int sum,d1,d2;
         while(a>=0 || b>=0 ||c>0){
             if(a>=0){
-                d1=num1.charAt(a)-'0';
-                a--;
+            d1=num1.charAt(a)-'0';
+            a--;
             }else{
                 d1=0;
             }
             if(b>=0){
-                d2=num2.charAt(b)-'0';
-                b--;
+            d2=num2.charAt(b)-'0';
+            b--;
             }else{
                 d2=0;
             }
-            sum = d1 + d2 + c;
+            sum=d1+d2+c;
             s.append(sum%10);
-            c = sum/10;
+            c=sum/10;
         }
         return s.reverse().toString();
     }
