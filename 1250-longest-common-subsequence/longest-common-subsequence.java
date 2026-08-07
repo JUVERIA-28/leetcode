@@ -16,7 +16,23 @@ class Solution {
                 dp[i][j]=Math.max(dp[i][j+1],dp[i+1][j]);
             }
         }
-     }   
+     }  
+     int i=0,j=0;
+     StringBuilder sb=new StringBuilder();
+     while(i<n1 && j<n2)
+     {
+        if(t1.charAt(i)==t2.charAt(j)){
+            sb.append(t1.charAt(i));
+            i++;j++;
+        }else if(dp[i+1][j]>dp[i][j+1])
+        {
+            i++;
+        }else{
+            j++;
+        }
+     } 
+     System.out.println(sb.toString());
+
      return dp[0][0];
     }
 }
