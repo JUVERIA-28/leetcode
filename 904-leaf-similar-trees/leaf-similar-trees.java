@@ -19,7 +19,8 @@ class Solution {
     {
         List<Integer> n1=new ArrayList<>();
         List<Integer> n2=new ArrayList<>();
-        leaf(root1,n1);leaf(root2,n2);
+        leaf(root1,n1);
+        leaf(root2,n2);
         return n1.equals(n2);
     }
     public void leaf(TreeNode node,List<Integer>nl)
@@ -31,7 +32,8 @@ class Solution {
         if(node.left==null && node.right==null)
         {
             nl.add(node.val);
-        }else{
+        }
+        else{
             leaf(node.left,nl);
             leaf(node.right,nl);
         }
