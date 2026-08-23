@@ -8,19 +8,24 @@
  */
 
 public class Solution extends GuessGame {
-    public int guessNumber(int n) {
-        int l=0,r=n;
-        while(l<=r){
-            int m=l+(r-l)/2;
-            int ans=guess(m);
-            if(ans==0){
-                return m;
-            }else if(ans==-1){
-                r=m-1;
-            }else{
-                l=m+1;
-            }
+    public int guessNumber(int n) 
+    {
+     int l=0,r=n;
+     while(l<=r)
+     {
+        int m=l+(r-l)/2;
+        int x=guess(m);
+        if(x==0)
+        {
+            return m;
         }
-        return -1;
+        else if(x==-1)
+        {
+            r=m-1;
+        }else{
+            l=m+1;
+        }
+     }  
+     return  -1;
     }
 }
