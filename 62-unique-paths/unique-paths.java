@@ -1,4 +1,5 @@
-class Solution {
+class Solution 
+{
     public int uniquePaths(int m, int n)
     {
         int[][] mt=new int[m][n];
@@ -16,7 +17,6 @@ class Solution {
                 mt[i][j]=mt[i-1][j]+mt[i][j-1];
             }
         }
-        
         return mt[m-1][n-1];
         
     }
