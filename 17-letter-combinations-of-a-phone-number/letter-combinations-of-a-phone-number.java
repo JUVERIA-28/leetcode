@@ -8,8 +8,6 @@ class Solution {
         allPath=new ArrayList<>();
         help(digits,0);
         return allPath;
-
-
     }
     public void help(String digit,int i)
     {
